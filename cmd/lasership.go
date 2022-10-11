@@ -110,11 +110,10 @@ func getResult(trackNum string) ResponseBody {
 }
 
 func printResult(res ResponseBody, all bool) {
-	fmt.Println()
 	fmt.Println("Estimated Delivery Date:")
 	fmt.Println("  ", res.EstimatedDeliveryDate)
 	fmt.Println()
-
+	
 	fmt.Println("Event(s):")
 	x := 1
 	if all {
@@ -130,6 +129,5 @@ func printResult(res ResponseBody, all bool) {
 		if event.Location != "" {
 			fmt.Println("  ", "Left at:", event.Location)
 		}
-		fmt.Println()
 	}
 }
