@@ -115,7 +115,8 @@ func printResult(res ResponseBody, all bool) {
 	fmt.Println("  ", res.EstimatedDeliveryDate)
 
 	fmt.Println("Event(s):")
-	for _, event := range res.Events {
+	for i := len(res.Events) - 1; i > -1; i-- {
+		event := res.Events[i]
 		fmt.Println("  ", event.DateTime)
 		if event.State != "" {
 			fmt.Println("  ", event.State, event.City, event.PostalCode)
