@@ -19,7 +19,7 @@ import (
 var lasershipCmd = &cobra.Command{
 	Use:     "lasership <tracking number>",
 	Aliases: []string{"ls"},
-	Short:   "A brief description of your command",
+	Short:   "Track a LaserShip package given a tracking number",
 	Long:    ``,
 	Args: func(cmd *cobra.Command, args []string) error {
 		if err := cobra.MinimumNArgs(1)(cmd, args); err != nil {
@@ -113,6 +113,7 @@ func printResult(res ResponseBody, all bool) {
 	fmt.Println()
 	fmt.Println("Estimated Delivery Date:")
 	fmt.Println("  ", res.EstimatedDeliveryDate)
+	fmt.Println()
 
 	fmt.Println("Event(s):")
 	x := 1
