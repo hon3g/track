@@ -126,6 +126,9 @@ func printResult(res ResponseBody, all bool) {
 			fmt.Println("  ", event.State, event.City, event.PostalCode)
 		}
 		fmt.Println("  ", event.EventLongText)
+		if event.Location != "" {
+			fmt.Println("  ", "Left at:", event.Location)
+		}
 		fmt.Println()
 	}
 }
