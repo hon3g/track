@@ -113,7 +113,6 @@ func printResult(res ResponseBody, all bool) {
 	fmt.Println("Estimated Delivery Date:")
 	fmt.Println("  ", res.EstimatedDeliveryDate)
 	fmt.Println()
-	
 	fmt.Println("Event(s):")
 	x := 1
 	if all {
@@ -128,6 +127,9 @@ func printResult(res ResponseBody, all bool) {
 		fmt.Println("  ", event.EventLongText)
 		if event.Location != "" {
 			fmt.Println("  ", "Left at:", event.Location)
+		}
+		if i != 0 {
+			fmt.Println()
 		}
 	}
 }
