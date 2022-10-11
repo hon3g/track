@@ -1,7 +1,8 @@
 ### Usage
 ```
 $ track help
-
+```
+```
 Usage:
   track [command]
 
@@ -17,7 +18,8 @@ Use "track [command] --help" for more information about a command.
 ```
 ```
 $ track lasership LS12345678
-
+```
+```
 Estimated Delivery Date:
    2022-10-10
 
@@ -26,11 +28,11 @@ Event(s):
    NY BROOKLYN 11204
    Your package has been delivered
    Left at: Front Door
-
 ```
 ```
 $ track lasership LS12345678 --all
-
+```
+```
 Estimated Delivery Date:
    2022-10-10
 
@@ -45,5 +47,4 @@ Event(s):
    NY BROOKLYN 11204
    Your package has been delivered
    Left at: Front Door
-
 ```
